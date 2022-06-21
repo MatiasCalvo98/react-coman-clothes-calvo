@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Children } from "react";
 import logo from "../../assets/logo1.png";
-import LocalMallIcon from "@mui/icons-material/LocalMall";
+import CartWidget from "../CartWidget";
 //import "./Navbar.css";
 
 const Navbar = () => {
@@ -27,8 +27,8 @@ const Navbar = () => {
         <a style={styles.anchors} href="#">
           Quienes Somos
         </a>
-        <LocalMallIcon style={styles.cartBag} fontSize="large" />
       </nav>
+      <CartWidget />
     </header>
   );
 };
@@ -53,10 +53,6 @@ const styles = {
   imagen: {
     width: "4%",
     marginLeft: "0.625rem",
-  },
-  cartBag: {
-    color: "white",
-    marginRight: "10",
   },
   anchors: {
     margin: 10,
