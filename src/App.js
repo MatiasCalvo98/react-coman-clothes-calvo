@@ -3,17 +3,18 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import CartWidget from "./Components/CartWidget";
 import ItemListContainer from "./Components/ItemListCointainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const miFlow = "Flow Americano";
 
   return (
-    <div>
+    <BrowserRouter>
       <Navbar>
         <CartWidget />
       </Navbar>
       <ItemListContainer greeting={miFlow} />
-    </div>
+    </BrowserRouter>
   );
 }
 

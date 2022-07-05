@@ -1,4 +1,5 @@
 import React, { Children } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo1.png";
 import CartWidget from "../CartWidget";
 //import "./Navbar.css";
@@ -6,27 +7,29 @@ import CartWidget from "../CartWidget";
 const Navbar = () => {
   return (
     <header style={styles.container}>
-      <img style={styles.imagen} src={logo} alt="logo" />
+      <Link to="/inicio">
+        <img style={styles.imagen} src={logo} alt="logo" />
+      </Link>
       <h1 style={styles.title}>Coman Clothes</h1>
       <nav style={styles.navStyle}>
-        <a style={styles.anchors} href="#">
+        <Link style={styles.anchors} to="/inicio">
           Inicio
-        </a>
-        <a style={styles.anchors} href="#">
+        </Link>
+        <Link style={styles.anchors} to="/productos">
           Productos
-        </a>
-        <a style={styles.anchors} href="#">
+        </Link>
+        <Link style={styles.anchors} to="/contacto">
           Contacto
-        </a>
-        <a style={styles.anchors} href="#">
+        </Link>
+        <Link style={styles.anchors} to="/talles">
           Guia de Talles
-        </a>
-        <a style={styles.anchors} href="#">
+        </Link>
+        <Link style={styles.anchors} to="/envios">
           Envios
-        </a>
-        <a style={styles.anchors} href="#">
+        </Link>
+        <Link style={styles.anchors} to="/quienes_somos">
           Quienes Somos
-        </a>
+        </Link>
       </nav>
       <CartWidget />
     </header>
@@ -51,7 +54,7 @@ const styles = {
     justifyContent: "space-between",
   },
   imagen: {
-    width: "4%",
+    width: "50%",
     marginLeft: "0.625rem",
   },
   anchors: {
