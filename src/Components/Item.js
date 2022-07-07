@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const itemStyles = {
   container: {
@@ -23,15 +24,17 @@ const itemStyles = {
 
 export default function Item({ elem }) {
   return (
-    <div style={itemStyles.container}>
-      <img
-        style={itemStyles.imgStyle}
-        src={elem.Image}
-        alt="Imagen del producto"
-      />
-      <p style={itemStyles.pStyle}>{elem.title}</p>
-      <p style={itemStyles.pStyle}>{elem.description}</p>
-      <p style={itemStyles.pStyle}>{elem.price}</p>
-    </div>
+    <Link element={<itemDetail />}>
+      <div style={itemStyles.container}>
+        <img
+          style={itemStyles.imgStyle}
+          src={elem.Image}
+          alt="Imagen del producto"
+        />
+        <p style={itemStyles.pStyle}>{elem.title}</p>
+        <p style={itemStyles.pStyle}>{elem.description}</p>
+        <p style={itemStyles.pStyle}>{elem.price}</p>
+      </div>
+    </Link>
   );
 }

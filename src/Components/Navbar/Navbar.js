@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link style={styles.anchors} to="/inicio">
           Inicio
         </Link>
-        <Link style={styles.anchors} to="/productos">
+        <Link style={styles.anchors} to="/product/:productId">
           Productos
         </Link>
         <Link style={styles.anchors} to="/contacto">
